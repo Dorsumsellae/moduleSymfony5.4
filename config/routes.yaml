@@ -1,3 +1,7 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+merci: 
+  path: /merci
+  controller: App\Controller\MonController::index
