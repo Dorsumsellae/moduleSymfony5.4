@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TestVueLoopController!
+{% endblock %}
+
+{% block body %}
+	<h1>
+		Il y a
+		{{peopleArray|length}}
+		personnes dans le tableau
+	</h1>
+
+	{% for people in peopleArray %}
+		<div class="people">
+			<h2>{{people['name']}}
+				{{people['firstname']|upper}}</h2>
+			<p>{{people['age']}}</p>
+		</div>
+	{% endfor %}
+
+{% endblock %}

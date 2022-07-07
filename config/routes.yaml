@@ -35,3 +35,8 @@ test_mon_show_route:
         url: '[0-9a-zA-Z/_]+'
     host: 127.0.0.1
     methods: GET
+
+test_mon_include:
+    path:  /test_include
+    defaults:
+      _controller: \App\Controller\TestIncludeController::index
