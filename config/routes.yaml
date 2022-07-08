@@ -40,3 +40,10 @@ test_mon_include:
     path:  /test_include
     defaults:
       _controller: \App\Controller\TestIncludeController::index
+
+
+read_join:
+  path: /read_join/{departement}
+  defaults:
+    _controller: \App\Controller\ReadJoinController::index
+    departement: ""

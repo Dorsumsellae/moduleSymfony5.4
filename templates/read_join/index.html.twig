@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ReadJoinController!
+{% endblock %}
+
+{% block body %}
+
+	<div class="departements">
+		{% if departements != [] %}
+			<h2>Résultats de la recherche :
+				{{departementSearch}}</h2>
+			{% for departement in departements %}
+				<div class="departement">
+					<h3>{{departement.id}}.
+						{{departement.nom}}
+						({{departement.code}})</h3>
+					<p>De la région :
+						{{departement.region.nom}}</p>
+				</div>
+			{% endfor %}
+		{% else %}
+			<p>Aucun résultat
+			</p>
+		{% endif %}
+	</div>
+
+
+{% endblock %}
