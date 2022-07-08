@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Hello ReadTablesController!
+{% endblock %}
+
+{% block body %}
+
+	{% if villes != []%}
+		<table>
+			<thead>
+				<tr>
+					<th>
+						id
+					</th>
+					<th>
+						Nom
+					</th>
+					<th>
+						Population
+					</th>
+					<th>
+						Département
+					</th>
+				</tr>
+			</thead>
+			{% for ville in villes %}
+				<tr>
+					<td>{{ville.id}}</td>
+					<td>{{ville.nom}}</td>
+					<td>{{ville.pop}}</td>
+					<td>{{ville.dept}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	{% else %}
+		<p>Aucun résultat</p>
+	{% endif %}
+
+
+{% endblock %}
